@@ -8,7 +8,7 @@ Neccessary things to be already install in systems:
 For using the repo follow below steps:
 1. git clone https://github.com/sumit-03/Blog-post.git.
 2. go to cloned repo directory through command line.
-3. issue "npm init" in command line.
+3. issue "npm install" in command line.
 4. run the server using nodemon app.js from command line.
 
 routes available:
