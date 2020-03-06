@@ -10,3 +10,7 @@ For using the repo follow below steps:
 2. go to cloned repo directory through command line.
 3. issue "npm init" in command line.
 4. run the server using nodemon app.js from command line.
+
+routes available:
+1. "/compose" for composing a blog.
+2. "/post/post_title" for heading to a particular blog-post. GUI is alo provided for that.
