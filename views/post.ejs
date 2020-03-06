@@ -1,0 +1,38 @@
+<%- include('partials/post_header'); -%>
+
+
+<h1><%= headingPost %></h1>
+
+<p><%= Content %></p>
+
+<h1>comments</h1>
+
+<% comment.forEach(function(e){ %>
+  <h2><%= e.title %></h2>
+  <p><%= e.commentBody %></p>
+<% }); %>
+
+<h3>new-comment</h3>
+
+ <!-- <form method="POST" action="/compose">
+    <p>Title</p>
+    <input type="text" name="post-title" style="width: 100%;">
+    <p>publish</p>
+    <textarea name="post" id="" cols="" rows="10" style="width: 100%;"></textarea><br><br>
+    <button type="submit" class="btn btn-primary">publish</button>
+</form> -->
+
+<form method="POST" action="/comment">
+    <div class="form-group">
+      <label for="pt">Title</label>
+      <input type="text" class="form-control" name="commentTitle" id="pt" placeholder="comment-title">
+    </div>
+    <div class="form-group">
+      <label for="p">comment</label>
+      <textarea class="form-control" name="commentBody" id="p" rows="4" placeholder="write your comment here!"></textarea>
+    </div>
+    <input name="postId" type="hidden" value="<%= headingPost %>">
+    <button type="submit" class="btn btn-primary">submit</button>
+  </form>
+
+<%- include('partials/footer'); -%>
